@@ -1,0 +1,461 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    background: #f3f3f3;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-bg {
+    background: rgb(255, 136, 0);
+    padding: 0.8rem 0;
+    border-radius: 0 0 40px 40px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.form-input {
+    display: flex;
+}
+
+.nav-container {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+
+}
+
+.nav-item {
+    background: #fff;
+    color: rgb(156, 156, 156);
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+
+    gap: 0.5rem;
+}
+
+.nav-item a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.form-input {
+    position: relative;
+}
+
+.form-input input {
+    width: 200px;
+    border-radius: 50px;
+    border: none;
+    height: 30px;
+    padding-left: 1rem;
+}
+
+.form-input button {
+    border-radius: 35px;
+    background: rgb(255, 136, 0);
+    border: none;
+    position: absolute;
+    right: .1rem;
+    top: 0;
+    padding: 0 1rem;
+    margin: .1rem;
+    bottom: 0;
+
+}
+
+.footer {
+    background-image: url("assest/bg.png");
+    min-height: 40;
+    padding: 9rem 0 5rem 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    filter: brightness(1);
+
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+
+}
+
+.footer ul li {
+    margin: 1rem 0;
+}
+
+.titulo-principal {
+    background: rgb(255, 136, 0);
+    border: 2px solid #fff;
+    padding: 0.6rem 2rem;
+    width: 200px;
+    border-radius: 20px;
+    margin: 1rem auto;
+
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 900;
+}
+
+.card-jogo {
+    padding: 0.5rem;
+    width: 150px;
+    max-width: 150px;
+    border-radius: 14px;
+
+}
+
+.card-jogo:hover {
+    background: rgb(255, 136, 0);
+    color: #fff;
+    cursor: pointer;
+}
+
+.card-jogo img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.card-jogo h4 {
+    font-weight: 500;
+    margin: 0.4rem 0;
+    text-align: center;
+
+}
+
+.jogo-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    color: #9b9b9b;
+}
+
+.card-jogo:hover .jogo-stats {
+    color: #fff;
+}
+
+.container-cards {
+    box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    border: 2px solid rgb(255, 136, 0);
+    border-radius: 30px;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    position: relative;
+    margin: 3rem 0;
+    justify-content: center;
+}
+
+.title-container-cards {
+    box-shadow: 1px -1px 5px rgba(0, 0, 0, 0.3);
+
+    right: 0;
+    top: 10rem;
+    text-transform: uppercase;
+    border-radius: 50%;
+    background: rgb(255, 136, 0);
+    border: 3px solid #fff;
+    width: 120px;
+    height: 120px;
+    text-wrap: wrap;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-weight: 800;
+    position: absolute;
+}
+
+.title-container-cards.left {
+    left: -4rem;
+}
+
+.title-container-cards.rigth {
+    right: -4rem;
+}
+
+.btn-link-card {
+    position: absolute;
+    top: 14rem;
+
+}
+
+.btn-link-card.left {
+    left: 10px;
+}
+
+.btn-link-card a {
+    text-decoration: none;
+    color: inherit;
+    background: rgb(255, 136, 0);
+    color: #fff;
+    font-size: 40px;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.btn-link-card.rigth {
+    right: 10px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 1rem;
+    padding: 1rem;
+    width: 80vw;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 0 0 250px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-header>img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.rating {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #FFF;
+    background: rgb(255, 136, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.game-icon {
+    padding: 0.5rem 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: inherit;
+
+}
+
+.carousel-btn {
+    background-color: #ff5722;
+    border: none;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+}
+
+.prev-btn {
+    left: -1.5rem;
+}
+
+.next-btn {
+    right: -1.5rem;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card-header {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-header h3 {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card-header p {
+    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.card-header>div {
+    text-align: start;
+}
