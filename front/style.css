@@ -138,6 +138,7 @@ table {
 body {
     font-family: "Roboto", sans-serif;
     background: #f3f3f3;
+    box-sizing: content-box !important;
 }
 
 .header {
@@ -221,7 +222,7 @@ body {
 .footer {
     background-image: url("assest/bg.png");
     min-height: 40;
-    padding: 9rem 0 5rem 0;
+    padding: 9rem 0 0 0;
     background-repeat: no-repeat;
     background-size: 100%;
     filter: brightness(1);
@@ -376,7 +377,6 @@ footer .container {
     scroll-behavior: smooth;
     gap: 1rem;
     padding: 1rem;
-    width: 80vw;
 }
 
 .card {
@@ -439,8 +439,7 @@ footer .container {
 }
 
 .card-header {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
+    display: flex;
     align-items: center;
     gap: 0.5rem;
 }
@@ -458,4 +457,202 @@ footer .container {
 
 .card-header>div {
     text-align: start;
+}
+
+.card-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.box_grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box_grid .ad {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.ad {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card_box {
+    border-radius: 18px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 1rem 2rem 2rem 2rem;
+    margin-top: 1rem;
+}
+
+.card-game-single {
+    width: 128px;
+    text-align: center;
+    margin: auto;
+    font-weight: 600;
+    text-wrap: no-wrap;
+
+}
+
+.card-game-single .img {
+    width: 128px;
+    height: 128px;
+    margin-bottom: 0.5rem;
+}
+
+.card-game-single img {
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.tituloCategoria {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #9b9b9b;
+    margin: 0.5rem 0 1rem 0;
+}
+
+.truncate {
+    white-space: nowrap;
+    /* Não quebra linha */
+    overflow: hidden;
+    /* Oculta o texto que ultrapassar o limite */
+    text-overflow: ellipsis;
+    /* Adiciona "..." no final do texto */
+    width: 125px;
+    /* Define o tamanho do contêiner */
+}
+
+.card_box_game_header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.card_box_game_info h1 {
+    font-size: 22px;
+    font-weight: 800;
+
+}
+
+.card_box_game_info_stats {
+    font-size: 18px;
+    font-weight: 600;
+    color: #9b9b9b;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.card_box_game_info_tags {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9b9b9b;
+    margin-top: 1rem;
+    margin-bottom: 0.4rem;
+
+}
+
+#container-tag-game span {
+    background: #9b9b9b;
+    color: #fff;
+    font-size: 13px;
+    padding: 0.4rem 0.5rem;
+    border-radius: 10px;
+}
+
+.card_box_game_img {
+    width: 128px;
+    height: 128px;
+}
+
+.card_box_game_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border: 3px solid rgb(255, 136, 0);
+}
+
+.ad-horizontal,
+.card_box_game_ad {
+    display: flex;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 10px;
+    align-items: center;
+    border: 1px solid #9b9b9b;
+    width: 100%;
+    margin: 1rem auto;
+    text-align: center;
+
+    height: 130px;
+}
+
+.container-game {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 3fr 1fr;
+}
+
+.card_box_game_rigth {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.left-game {}
+
+.rigth-game {}
+
+.card_box_game_ad {
+    height: 600px;
+}
+
+.container-game {
+    padding: 2rem 0;
+}
+
+.card_box_game_descricao {
+    font-size: 18x;
+    letter-spacing: 0.14rem;
+    color: #9b9b9b;
+}
+
+.card_box_game_descricao p {
+    margin-bottom: 1rem;
+}
+
+.card_box_game_rigth_games {
+    display: grid;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.card_box_game_rigth_games .card-game-single {
+    width: auto;
+    margin: auto;
+    text-align: center;
 }

@@ -1,3 +1,4 @@
+const { writeData } = require("./dados")
 const API_KEY = "f7bc3436e62241779fc6df350e28371b"
 const BASE_URL = "https://api.rawg.io/api/"
 const PLATAFORMAS = {
@@ -40,16 +41,18 @@ const OrganizarData = async () => {
 
     const jogosTratados = await PadronizarJogos(data.results)
 
-    console.log(jogosTratados)
+    writeData(jogosTratados)
+    console.log("Dados organizados com sucesso")
 }
 
 const PadronizarJogos = async (lista) => {
     let listaRetorno = []
     for (let i = 0; i < lista.length; i++) {
-        const { name, platforms, background_image, rating, id, short_screenshots } = lista[i];
+        const { name, platforms, genres, background_image, rating, id, short_screenshots } = lista[i];
         const [detalhesJogo, erro] = await API.ConsultarDetalhesJogo(id)
         const plataforams = platforms.map(x => x.platform.name).join(", ")
         const imagenes = short_screenshots.map(x => x.image)
+        const generos = genres.map(x => x.slug)
         let jogo = {
             nome: name,
             image: background_image,
@@ -58,12 +61,14 @@ const PadronizarJogos = async (lista) => {
             reputacao: rating,
             imagensComplementares: imagenes,
             plataforams: plataforams,
-            avaliacoes: Math.floor(Math.random() * 100)
+            generos: generos,
+            avaliacoes: Math.floor(Math.random() * 10000)
         }
         listaRetorno.push(jogo);
-        break
     }
     return listaRetorno
 }
 
- OrganizarData()
+module.exports = {
+    OrganizarData
+}
